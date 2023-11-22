@@ -22,17 +22,14 @@ class AddLink extends Component {
         if (this.state.value === "") {
             return
         }
-        const linkName = this.createLink(this.state.value)
-        console.log(linkName)
+        var linkName = makeid(6)
+        this.createLink(this.state.value, linkName)
         this.setState({value: `https://timka.su/${linkName}`})
     }
 
-    createLink(url) {
-        axios.post("https://link.timka.su",
-            {name: makeid(6), url: url}).then(function (response) {
-                console.log(response.data.name)
-            return `${response.data.name}`
-        })
+    createLink(url, linkName) {
+        return axios.post("https://link.timka.su",
+            {name: linkName, url: url})
     }
 
     render () {
@@ -47,7 +44,7 @@ class AddLink extends Component {
                     value={this.state.value}
                     onChange={this.handleChange}
                     autoComplete="off"
-                    required/>
+                    required />
                 <br/>
                 <button onClick={this.short} className="shortButton">Short!</button>
             </div>
