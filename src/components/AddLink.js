@@ -8,7 +8,7 @@ import axios from 'axios'
 class AddLink extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''}
+        this.state = {value: '', buttonText: 'Short!'}
         this.handleChange = this.handleChange.bind(this)
         this.short = this.short.bind(this)
         this.createLink = this.createLink.bind(this)
@@ -24,7 +24,10 @@ class AddLink extends Component {
         }
         var linkName = makeid(6)
         this.createLink(this.state.value, linkName)
-        this.setState({value: `https://timka.su/${linkName}`})
+        const link = `https://timka.su/${linkName}`
+        this.setState({value: link})
+        navigator.clipboard.writeText(link)
+        this.setState({buttonText: 'Copied!'})
     }
 
     createLink(url, linkName) {
@@ -46,7 +49,7 @@ class AddLink extends Component {
                     autoComplete="off"
                     required />
                 <br/>
-                <button onClick={this.short} className="shortButton">Short!</button>
+                <button onClick={this.short} className="shortButton">{this.state.buttonText}</button>
             </div>
         </div>
     }
