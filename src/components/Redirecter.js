@@ -14,6 +14,9 @@ class Redirecter extends Component {
         axios.get(`https://link.timka.su?link=${linkName}`).then(
             function (response) {
                 const json = response.data[0]
+                if (json === undefined) {
+                    window.location.href = '/404'
+                }
                 console.log(json)
                 window.location.href = json.url
             }
