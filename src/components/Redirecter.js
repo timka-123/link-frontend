@@ -2,7 +2,8 @@ import {React, Component} from "react";
 import {resolve} from "crypto-browserify/example/bundle";
 import "../config"
 
-const axios = require('axios').default
+import 'axios'
+import axios from "axios";
 
 
 class Redirecter extends Component {
@@ -12,10 +13,9 @@ class Redirecter extends Component {
         console.log(linkName)
         axios.get(`https://link.timka.su?link=${linkName}`).then(
             function (response) {
-                const json = response.toString()
-                const obj = JSON.parse(json)
-                console.log(obj)
-                window.location.href = obj.url
+                const json = response.data[0]
+                console.log(json)
+                window.location.href = json.url
             }
         )
         return
