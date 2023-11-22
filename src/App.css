@@ -1,38 +1,56 @@
+@font-face {
+  src: url("fonts/JetBrainsMono-Regular.woff2");
+  font-family: mono;
+}
+
+@font-face {
+  src: url("fonts/JetBrainsMono-Italic.woff2");
+  font-family: JetbrainsItalic;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: #1B1A1F;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addForm {
+  margin-top: 200px;
+}
+
+.linkInput {
+  margin-top: 100px;
+  width: 300px;
+  height: 30px;
+  padding: 0.2em 0.5em;
+  font-family: JetBrainsItalic;
+  border-radius: 15px;
+}
+
+.title {
+  color: #FFFFFF;
+  font-size: xxx-large;
+  font-family: JetBrainsItalic;
+}
+
+h1, h2 {
+  font-family: mono;
+}
+
+.shortButton {
+  height: 50px;
+  width: 150px;
+  background-color: #322C77;
+  color: antiquewhite;
+  border: #322C77;
+  border-radius: 5%;
+  font-size: medium;
+  margin-left: 15px;
+  margin-top: 30px;
+  font-family: JetBrainsItalic;
+  border-radius: 25px;
 }
