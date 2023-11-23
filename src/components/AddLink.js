@@ -19,7 +19,7 @@ class AddLink extends Component {
     }
 
     short () {
-        const regex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+        const regex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/ig;
         if (this.state.value === "" || this.state.value.includes('timka.su') || !(regex.test(this.state.value))) {
             return
         }
