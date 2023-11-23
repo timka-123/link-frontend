@@ -19,7 +19,8 @@ class AddLink extends Component {
     }
 
     short () {
-        if (this.state.value === "") {
+        const regex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+        if (this.state.value === "" || this.state.value.includes('timka.su') || !(regex.test(this.state.value))) {
             return
         }
         var linkName = makeid(6)
