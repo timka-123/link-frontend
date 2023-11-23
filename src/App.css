@@ -27,18 +27,18 @@ body {
   width: 300px;
   height: 30px;
   padding: 0.2em 0.5em;
-  font-family: JetBrainsItalic;
+  font-family: JetBrainsItalic, monospace;
   border-radius: 15px;
 }
 
 .title {
   color: #FFFFFF;
   font-size: xxx-large;
-  font-family: JetBrainsItalic;
+  font-family: JetBrainsItalic, monospace;
 }
 
 h1, h2 {
-  font-family: mono;
+  font-family: mono, monospace;
 }
 
 .shortButton {
@@ -47,10 +47,31 @@ h1, h2 {
   background-color: #322C77;
   color: antiquewhite;
   border: #322C77;
-  border-radius: 5%;
   font-size: medium;
   margin-left: 15px;
   margin-top: 30px;
-  font-family: JetBrainsItalic;
+  font-family: JetBrainsItalic, monospace;
   border-radius: 25px;
+  margin-bottom: 200px;
+}
+
+.notFound {
+  margin-top: 200px;
+  color: #FFFFFF;
+}
+
+.title {
+  margin-top: 200px;
+}
+
+.small-text {
+  color: #FFFFFF;
+  margin-top: 100px;
+  font-family: JetBrainsItalic, monospace;
+  margin-bottom: 150px;
+}
+
+.href {
+  color: #FFFFFF;
+  text-decoration: none;
 }

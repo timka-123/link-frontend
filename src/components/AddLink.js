@@ -37,7 +37,6 @@ class AddLink extends Component {
 
     render () {
         return <div className="addForm">
-            <h3 className="title">Timka ShortLink</h3>
             <div className="form">
                 <input
                     name="link"
