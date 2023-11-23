@@ -50,6 +50,20 @@ h1, h2 {
   font-family: JetBrainsItalic, monospace;
   border-radius: 25px;
   margin-bottom: 200px;
+  transition-property: all;
+  transition: all ease 1s;
+}
+
+.shortButton:hover {
+  color: #fff;
+  transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  background-color: #001830;
+}
+
+.shortButton:nth-child(1):hover {
+  background: red;
 }
 
 .notFound {
