@@ -1,6 +1,5 @@
 import {React, Component} from "react";
-import "../App.css"
-import "../config"
+import "../css/App.css"
 
 import axios from 'axios'
 
