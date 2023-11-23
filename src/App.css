@@ -25,6 +25,7 @@ body {
   padding: 0.2em 0.5em;
   font-family: JetBrainsItalic, monospace;
   border-radius: 15px;
+  outline: none;
 }
 
 .title {
