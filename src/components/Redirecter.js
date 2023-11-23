@@ -1,4 +1,4 @@
-import {React, Component} from "react";
+import {Component} from "react";
 import "../config"
 import Placeholder from "./Placeholder";
 
@@ -8,8 +8,8 @@ import axios from "axios";
 
 class Redirecter extends Component {
     render () {
-        var parts = window.location.href.split('/')
-        var linkName = parts[3]
+        const parts = window.location.href.split('/')
+        const linkName = parts[3]
         console.log(linkName)
         axios.get(`https://link.timka.su?link=${linkName}`).then(
             function (response) {
