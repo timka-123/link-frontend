@@ -1,6 +1,6 @@
 import {React, Component} from "react";
-import {resolve} from "crypto-browserify/example/bundle";
 import "../config"
+import Placeholder from "./Placeholder";
 
 import 'axios'
 import axios from "axios";
@@ -21,7 +21,11 @@ class Redirecter extends Component {
                 window.location.href = json.url
             }
         )
-        return
+        return <div>
+            <h2 className="notFound">Redirect in progress...</h2>
+
+            <Placeholder />
+        </div>
     }
 }
 
