@@ -41,7 +41,7 @@ class AddLink extends Component {
                 <input
                     name="link"
                     type="url"
-                    placeholder="Link to be short"
+                    placeholder="Link to be shortened"
                     className="linkInput"
                     value={this.state.value}
                     onChange={this.handleChange}
